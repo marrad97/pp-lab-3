@@ -4,15 +4,30 @@ import geometry.Point;
 
 public class Main {
     public static void main(String[] args) {
-        Point point = new Point(1,1);
-        Circle circle = new Circle(point, 1);
-        ColoredCircle coloredCircle = new ColoredCircle(point, 1, "CZERWONY");
+        Circle[] circles = new Circle[1];
+        circles[0] = new Circle(new Point(0, 0), 1);
 
-        System.out.println(point.toString());
+        ColoredCircle[] coloredCircles = new ColoredCircle[1];
+        coloredCircles[0] = new ColoredCircle(new Point(3, 3), 1, "CZERWONY");
 
-        System.out.println(circle.toString());
-        System.out.println(circle.calculatePerimeter());
+        obwod(circles);
 
-        System.out.println(coloredCircle.toString());
+        obwodKolorowychKol(coloredCircles);
     }
+
+    private static void obwodKolorowychKol(ColoredCircle[] coloredCircles) {
+        System.out.println("obwody kolorowych kol ->");
+        for (ColoredCircle coloredCircle : coloredCircles) {
+            System.out.println("obwod " + coloredCircle.calculatePerimeter());
+            System.out.println("kolor " + coloredCircle.getColor());
+        }
+    }
+
+    private static void obwod(Circle[] circles) {
+        System.out.println("obwody kol ->");
+        for (Circle circle : circles) {
+            System.out.println("obwod " + circle.calculatePerimeter());
+        }
+    }
+
 }
