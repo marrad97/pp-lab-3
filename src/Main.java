@@ -18,15 +18,14 @@ public class Main {
     private static void obwodKolorowychKol(ColoredCircle[] coloredCircles) {
         System.out.println("obwody kolorowych kol ->");
         for (ColoredCircle coloredCircle : coloredCircles) {
-            System.out.println("obwod " + coloredCircle.calculatePerimeter());
-            System.out.println("kolor " + coloredCircle.getColor());
+            coloredCircle.calculateArea(coloredCircle);
         }
     }
 
     private static void obwod(Circle[] circles) {
         System.out.println("obwody kol ->");
         for (Circle circle : circles) {
-            System.out.println("obwod " + circle.calculatePerimeter());
+            circle.calculateArea(circle);
         }
     }
 

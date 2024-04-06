@@ -13,6 +13,11 @@ public class ColoredCircle extends Circle {
         return color;
     }
 
+    public void calculateArea(ColoredCircle coloredCircle){
+        System.out.println("obwod " + coloredCircle.calculatePerimeter());
+        System.out.println("kolor " + coloredCircle.getColor());
+    }
+
     @java.lang.Override
     public java.lang.String toString() {
         return "ColoredCircle{" +

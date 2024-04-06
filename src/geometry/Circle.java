@@ -22,6 +22,10 @@ public class Circle {
         return Math.PI * (2 * this.radius);
     }
 
+    public void calculateArea(Circle circle){
+        System.out.println("obwod " + circle.calculatePerimeter());
+    }
+
     public Point getCenter() {
         return center;
     }
